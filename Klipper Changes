@@ -1,4 +1,6 @@
 ##Screws Tilt Adjust (Tramming) via Victor Bared  Ender 3 Pro V2 How to Setup Screw Tilt Calculate aka Tramming in Klipper.    https://youtu.be/VWRRtOqTdHI
+# https://klipper.discourse.group/t/creality-board-4-2-2-and-4-2-7-schematics/3104
+
 
 [screws_tilt_adjust]
 screw1: 75,35
@@ -15,3 +17,35 @@ screw_thread: CW-M4 # Use CW for Clockwise and CCW for Counter Clockwise
 
 
 ## BLTouch Chris Riley - Klipper - BL Touch - Auto Bed Leveling - Creality Ender 3 V2 - Chris's Basement - 2022     https://youtu.be/iEo7tJ0wbPU
+[stepper_z]
+step_pin: PB6
+dir_pin: PB5
+enable_pin: !PC3
+microsteps: 16
+rotation_distance: 4
+endstop_pin: probe:z_virtual_endstop
+position_max: 300
+#position_endstop: 0.0
+
+[bltouch]
+sensor_pin: ^PB1
+control_pin: PB0
+x_offset: -43
+y_offset: -10
+z_offset: 0
+
+[safe z_home]
+home_xy_position: 117.5,117.5
+z_hop: 10
+z_hop_speed: 5
+
+[bed_mesh]
+speed: 120
+horizontal_move_z: 5
+mesh_min: 15,15
+mesh_max: 188,191
+probe_count: 5,5
+algorithm: bicubic
+fade_start: 1
+fade_end: 10
+fade_target: 0
