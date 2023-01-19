@@ -1,0 +1,10 @@
+Heat nozzle and bed to 215 and 60
+
+1. Home All
+2. Go to console and type probe_calibrate   #Nozzle moves to where probe homed
+Use buttons to lower nozzle and until paper has slight drag
+
+
+Manual Commands
+3. Type: testz z=-1 #Keep Decreasing number until paper has slight drag  Example z=-2.01
+
