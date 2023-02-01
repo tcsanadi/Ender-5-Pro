@@ -1,0 +1,15 @@
+https://www.raspberrypi.com/news/the-latest-update-to-raspberry-pi-os/
+
+To Update PI
+sudo apt update
+sudo apt full-upgrade
+
+
+To Change Network Settings
+sudo raspi-config
+
+To Install VPN
+sudo apt install network-manager-openvpn-gnome
+
+To Install Network Manager
+sudo apt install network-manager
